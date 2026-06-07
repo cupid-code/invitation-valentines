@@ -1,0 +1,28 @@
+{
+  "theme": "blush",
+  "invitation": {
+    "title": "Will you be my Valentine, \nBabe?",
+    "subtitle": "A special curated experience awaits... if you say yes.",
+    "yesButtonText": "YES!",
+    "noButtonText": "No",
+    "finalNoMessage": "Aray ko wala kang awa 💔"
+  },
+  "images": {
+    "click1": "https://lh3.googleusercontent.com/aida-public/AB6AXuBzAaRc2Y7OAzyF0t0dmYQGrMhhtG6AmUU3gxP-T7UKpYjn2B1RE6AKDh0BVdXLwk943slih1C_4cZpdRIUYNrMnqnRKQ2fIXKDMsGfAm3XvJU2IEmEDXq6vaYVZzrfLHIn2DtttigllATqZrLXPh2rDdn6B0yr99S3JItLJZy-M1PW7tNHqLnqw6u-PuMs_zV_AQ38rLTUwPzx4MT6-6gtYEeQrNOZK5EcAzNLctsDJe__7NdNW-af6wYWOBbVbETzHIRvW5s0gw",
+    "click2": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsHogin2eQy6TS_WwCatIsBKUH35ryHvZIdmaF7-jr83PNWJbXQNRgeIHCiDkzg4RVXm85WOiGSYGLNb4otUly0f3v7cUw3LJewiZCjsd9XtmWCUqLvQMxgjog6q0tUYGp9LsN896VXYPrQOi0OOpfcdLxWogn7dc33HQCplFRvYgBW4mZ8z7tbLe3AD2MqQSM_Md5MZVAcjx_ndPFowvz5rLpVYcISof2s01-z5JGImrmC6N6-VEu2gmAYJgzjEIG32RFkGGKmg",
+    "click3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDZU_Z2RKyV_2bTmbYY0sKLyGGhUfMqcCmrt-rG_Sbuj_bNO94_kQbz9RZquEpTfCp_aI_hOh4ZWRPX25SMv2yZOEYC9iC0sHWm_CH4wCB4BjekvmAnyYiHx1r1Bnoo6cGoMrRbg3kWofuUVO4sIoJvQuUy7kfAlaK0RZhofl-jMUjJCMvoL4CRPSRS59vSzeYEYi7lt0XxnEOrq40uJTrsekBCJ7kAqrVoOeyBGnwi2VhCp_gH5AvBzsmUWzrTglqAgmGiXaZmKA",
+    "click4": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1IYKY7dAn8zbTuDwsAZ8Lbxte4CHq_Xtby4COzCjMkLXxvJ8cLMTqm0OGsQdlzyrkrJz5-2TG5Wr36anaA0R2P5f4X5wtgUhXjeTC4vi5wC4Re3D5F2l_6aI1ZzJuF8irdVX_AXNHaYf6rHhOzm3gIOgzETHzTIe_FdxzCw0UJIhuYTZ_fxhs1Do5sjfzAlIzs0kMQ_FjXD-PWEMWX_1zcqT6L8cG9c-QlzEYhcMUdxf5d3hrsNOQ5J9DXbbNX7Ju9h2FqKXD2A",
+    "final": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpJTQIGw6fW7XGujmpS9MlBNKUjF6MIdxI5ppdjr6Wzu_YJsrxc_qxkbSWFb_Vo_xnsIIpdGL5glL8Jx2V3Q7p1QvR8BL53CvRDBcLP7UCJggrra4GdUqfZ1RY2CY-w14UDA81SLG36EGNwcrmQ7h0Rb-ZAopemiXMtjxt8MlMpzu5FBnFP4odD44Fj6erKc-EehG830Y7BNaBxyvEQJIFy9OdLw9sstgmwLj1C1copg1Ny74e_mumIF4v6uajGxqaX0Ty6-kWwA",
+    "knockoutTimeMs": 8000
+  },
+  "formOptions": {
+    "places": ["Fancy Dinner", "Starlit Picnic", "Cozy Movie Night", "Art Gallery", "Beach Walk"],
+    "vibes": ["Romantic", "Playful", "Chill", "Elegant", "Adventurous"]
+  },
+  "email": {
+    "publicKey": "",
+    "serviceId": "",
+    "templateId": "",
+    "toEmail": ""
+  }
+}

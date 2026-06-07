@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Amour Carnival | A Whimsical Invitation</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf8f8",
+                        "primary-fixed-dim": "#ffb3b6",
+                        "primary-container": "#e11d48",
+                        "inverse-on-surface": "#f4f0f0",
+                        "tertiary-fixed-dim": "#ffb2bd",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#ebe7e7",
+                        "outline-variant": "#e5bdbe",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e7dde3",
+                        "on-tertiary-container": "#fffaf9",
+                        "surface-container": "#f1eded",
+                        "primary-fixed": "#ffdada",
+                        "on-primary-container": "#fffaf9",
+                        "secondary-fixed-dim": "#cec4ca",
+                        "surface-container-highest": "#e5e2e2",
+                        "on-secondary-fixed": "#1f1a1e",
+                        "surface-dim": "#ddd9d9",
+                        "inverse-primary": "#ffb3b6",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#c74563",
+                        "tertiary": "#a62c4c",
+                        "on-surface-variant": "#5c3f40",
+                        "on-secondary-fixed-variant": "#4b454a",
+                        "on-surface": "#1c1b1c",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1c",
+                        "secondary-fixed": "#eae0e6",
+                        "surface-variant": "#e5e2e2",
+                        "surface-container-low": "#f6f3f3",
+                        "primary": "#b80035",
+                        "on-tertiary-fixed-variant": "#8a1538",
+                        "tertiary-fixed": "#ffd9dd",
+                        "surface-tint": "#be0037",
+                        "on-primary-fixed": "#40000c",
+                        "secondary": "#635c61",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf8f8",
+                        "surface-bright": "#fcf8f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#400014",
+                        "on-secondary-container": "#686066",
+                        "on-primary-fixed-variant": "#920028",
+                        "outline": "#906f70",
+                        "gold-deep": "#8B6F00",
+                        "gold-metallic": "#D4AF37",
+                        "gold-light": "#F9D71C",
+                        "theme-pink": "#FFF1F2",
+                        "theme-red": "#7F1D1D",
+                        "theme-wine": "#4C0519"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        html, body {
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        html, body { overflow: hidden; height: 100vh; }
+        @media print {
+            @page { margin: 0; size: auto; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            body, html { overflow: visible; height: auto; margin: 0; padding: 0; background: white !important; }
+            main { padding: 0; height: auto; display: block; margin: 0; }
+            #ask-section, #letter-modal { display: none !important; }
+            #ticket-section { display: flex !important; opacity: 1 !important; transform: none !important; height: auto; padding: 0; margin: 0; }
+            #ticket-card { box-shadow: none; outline: none; margin: 0; }
+            .golden-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important; }
+            button { display: none !important; }
+        }
+        .grainy-bg {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        .scallop-border {
+            mask-image: radial-gradient(circle 12px at 100% 50%, transparent 12px, black 12px), radial-gradient(circle 12px at 0% 50%, transparent 12px, black 12px);
+            -webkit-mask-image: radial-gradient(circle 12px at 100% 50%, transparent 12px, black 12px), radial-gradient(circle 12px at 0% 50%, transparent 12px, black 12px);
+        }
+        .golden-gradient {
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            background-size: 200% 200%;
+            animation: shine 5s ease infinite;
+        }
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .guilloche-pattern {
+            background-image: url("https://www.transparenttextures.com/patterns/vintage-speckles.png");
+            opacity: 0.15;
+        }
+        .ticket-border {
+            border: 2px solid #8B6F00;
+            outline: 6px double #D4AF37;
+            outline-offset: -12px;
+        }
+        .envelope-shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+        .modal-active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            pointer-events: auto !important;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            width: 280px;
+            height: 180px;
+            background-color: #f1eded;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            perspective: 1000px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.5s ease;
+        }
+        .envelope-wrapper:hover {
+            transform: translateY(-5px);
+        }
+        .envelope-lid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ebe7e7;
+            clip-path: polygon(0 0, 100% 0, 50% 60%);
+            z-index: 3;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: top;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .envelope-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f6f3f3;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 50%);
+            z-index: 2;
+        }
+        .envelope-card {
+            position: absolute;
+            top: 10px;
+            left: 5%;
+            width: 90%;
+            height: 80%;
+            background-color: white;
+            z-index: 1;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .open .envelope-lid {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+        .open .envelope-card {
+            transform: translateY(-50px);
+        }
+
+        .tear-left {
+            animation: tearLeft 0.8s forwards ease-in;
+        }
+        .tear-right {
+            animation: tearRight 0.8s forwards ease-in;
+        }
+        @keyframes tearLeft {
+            0% { transform: rotate(0) translate(0, 0); opacity: 1; }
+            30% { transform: rotate(-5deg) translate(-10px, 0); }
+            100% { transform: rotate(-25deg) translate(-200px, 300px); opacity: 0; }
+        }
+        @keyframes tearRight {
+            0% { transform: rotate(0) translate(0, 0); opacity: 1; }
+            30% { transform: rotate(5deg) translate(10px, 0); }
+            100% { transform: rotate(25deg) translate(200px, 300px); opacity: 0; }
+        }
+
+        .sad-heart-img {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .knocked-out {
+            opacity: 0 !important;
+            transform: scale(0.5) translateY(20px);
+            pointer-events: none;
+        }
+        
+        /* Custom Theme Classes */
+        body.theme-blush { background-color: #fcf8f8 !important; }
+        body.theme-rose { background-color: #fff1f2 !important; }
+        body.theme-crimson { background-color: #fef2f2 !important; }
+        body.theme-midnight { background-color: #1e1b4b !important; color: #818cf8 !important; }
+        body.theme-midnight #ask-headline { color: #818cf8; }
+        body.theme-midnight #ask-subtitle { color: #c7d2fe; }
+    </style>
+</head>
+<body class="bg-surface grainy-bg min-h-screen font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed transition-colors duration-1000 overflow-hidden">
+
+<main class="pt-8 pb-8 px-margin-mobile md:px-margin-desktop flex flex-col items-center max-w-container-max mx-auto overflow-hidden h-screen">
+<!-- UI State 1: THE ASK -->
+<section class="flex flex-col items-center text-center space-y-4 w-full max-w-2xl transition-all duration-700" id="ask-section">
+<div class="space-y-2">
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-sm" id="ask-headline">
+<!-- Text populated via script -->
+</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-md mx-auto transition-opacity duration-500" id="ask-subtitle">
+<!-- Text populated via script -->
+</p>
+</div>
+<div class="relative group py-10 flex items-center justify-center min-h-[300px] w-full" id="envelope-container">
+<div class="absolute left-[calc(50%+150px)] top-1/2 -translate-y-1/2 w-48 h-48 flex items-center justify-center">
+<img alt="Sad character" class="w-full h-full object-contain opacity-0 pointer-events-none sad-heart-img" id="sad-heart-display" src=""/>
+</div>
+<div class="absolute -inset-4 bg-primary-container opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity"></div>
+<!-- Final mad bear centered display (starts hidden) -->
+<div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-500" id="final-mad-bear-container">
+<img alt="Very mad bear" class="max-w-[300px] max-h-[300px] object-contain drop-shadow-2xl" id="final-image" src=""/>
+</div>
+<div class="envelope-wrapper relative" id="main-envelope" onclick="handleYes()">
+<div class="w-full h-full relative" id="envelope-normal-view">
+<div class="envelope-lid"></div>
+<div class="envelope-body"></div>
+<div class="envelope-card">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="absolute inset-0 hidden" id="tear-parts">
+<div class="absolute inset-0 overflow-hidden" id="tear-part-left" style="clip-path: polygon(0 0, 50% 0, 45% 100%, 0 100%);">
+<div class="absolute inset-0 bg-[#ebe7e7]" style="clip-path: polygon(0 0, 100% 0, 50% 60%);"></div>
+<div class="absolute inset-0 bg-[#f6f3f3]" style="clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 50%);"></div>
+</div>
+<div class="absolute inset-0 overflow-hidden" id="tear-part-right" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 45% 100%);">
+<div class="absolute inset-0 bg-[#ebe7e7]" style="clip-path: polygon(0 0, 100% 0, 50% 60%);"></div>
+<div class="absolute inset-0 bg-[#f6f3f3]" style="clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 50%);"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-6 pt-4 min-h-[100px]" id="button-container">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-10 py-4 rounded-full shadow-lg hover:shadow-xl active:scale-95 transition-all duration-300" id="yes-btn" onclick="handleYes()">
+                YES!
+            </button>
+<button class="border-2 border-tertiary text-tertiary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-tertiary hover:text-white active:scale-95 transition-all duration-300" id="no-btn" onclick="handleNo()">
+                No
+            </button>
+</div>
+<div class="hidden text-error font-headline-md text-headline-md mt-10 animate-bounce text-center px-4" id="broken-message">
+<!-- Text populated via script -->
+</div>
+</section>
+<!-- UI State 2: THE LETTER (Modal) -->
+<div class="fixed inset-0 z-[60] flex items-center justify-center p-6 bg-on-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500" id="letter-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl overflow-hidden transform translate-y-10 transition-transform duration-500" id="letter-content">
+<!-- Fold 1: Acceptance -->
+<div class="p-8 space-y-6 transition-opacity duration-300" id="fold-1">
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="text-center space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Hooray!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        I knew you'd make my heart skip a beat. Let's create a memory that rivals the magic of a vintage carnival.
+                    </p>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-xl hover:bg-primary/90 transition-colors" onclick="goToFold(2)">
+                    Let's plan our date!
+                </button>
+</div>
+<!-- Fold 2: Planning (Location) -->
+<div class="hidden p-8 space-y-6 opacity-0 transition-opacity duration-300" id="fold-2">
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary text-center">When and Where?</h3>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block text-center">Pick a Date &amp; Time</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface text-center" id="date-input" type="datetime-local"/>
+</div>
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-on-surface-variant block text-center">Preferred Place</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 justify-center" id="location-grid">
+<!-- JS Populated -->
+</div>
+<div class="flex flex-col gap-3 items-center">
+<div class="grid grid-cols-2 gap-3 w-full">
+<button class="flex items-center justify-center p-3 rounded-lg border-2 border-outline-variant bg-surface-container-low hover:bg-surface-container-high transition-all text-label-md text-on-surface font-semibold" id="location-shuffle-btn" onclick="pickForMe('location')">
+<span class="material-symbols-outlined text-[18px] mr-1">shuffle</span> Pick for Me
+                                </button>
+<button class="flex items-center justify-center p-3 rounded-lg border-2 border-outline-variant bg-surface-container-low hover:bg-surface-container-high transition-all text-label-md text-on-surface font-semibold" id="location-custom-btn" onclick="toggleCustom('location')">
+<span class="material-symbols-outlined text-[18px] mr-1">edit</span> Custom
+                                </button>
+</div>
+<div class="w-full hidden space-y-2" id="custom-location-wrapper">
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface" id="custom-location-input" placeholder="Enter your secret spot..." type="text"/>
+<button class="w-full py-2 bg-surface-container-high text-label-sm font-semibold rounded-lg hover:bg-surface-dim transition-colors" onclick="addCustomOption('location')">Add to list</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-4 border-t border-surface-container-high">
+<button class="flex-1 border-2 border-outline text-outline font-label-md text-label-md py-3 rounded-xl hover:bg-surface-container transition-colors" onclick="goToFold(1)">Back</button>
+<button class="flex-[2] bg-primary text-on-primary font-label-md text-label-md py-3 rounded-xl hover:bg-primary/90 transition-colors" onclick="goToFold(3)">Next Step</button>
+</div>
+</div>
+<!-- Fold 3: Vibe -->
+<div class="hidden p-8 space-y-6 opacity-0 transition-opacity duration-300" id="fold-3">
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary text-center">What's the vibe?</h3>
+<p class="text-on-surface-variant text-body-md text-center">Setting the mood for our special day.</p>
+<div class="grid grid-cols-2 gap-3 justify-center" id="vibe-grid">
+<!-- JS Populated -->
+</div>
+<div class="flex flex-col gap-3 items-center">
+<div class="grid grid-cols-2 gap-3 w-full">
+<button class="flex items-center justify-center p-3 rounded-lg border-2 border-outline-variant bg-surface-container-low hover:bg-surface-container-high transition-all text-label-md text-on-surface font-semibold" id="vibe-shuffle-btn" onclick="pickForMe('vibe')">
+<span class="material-symbols-outlined text-[18px] mr-1">shuffle</span> Pick for Me
+                            </button>
+<button class="flex items-center justify-center p-3 rounded-lg border-2 border-outline-variant bg-surface-container-low hover:bg-surface-container-high transition-all text-label-md text-on-surface font-semibold" id="vibe-custom-btn" onclick="toggleCustom('vibe')">
+<span class="material-symbols-outlined text-[18px] mr-1">edit</span> Custom
+                            </button>
+</div>
+<div class="w-full hidden space-y-2" id="custom-vibe-wrapper">
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface" id="custom-vibe-input" placeholder="A specific mood..." type="text"/>
+<button class="w-full py-2 bg-surface-container-high text-label-sm font-semibold rounded-lg hover:bg-surface-dim transition-colors" onclick="addCustomOption('vibe')">Add to list</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-4 border-t border-surface-container-high">
+<button class="flex-1 border-2 border-outline text-outline font-label-md text-label-md py-3 rounded-xl hover:bg-surface-container transition-colors" onclick="goToFold(2)">Back</button>
+<button class="flex-[2] bg-primary text-on-primary font-label-md text-label-md py-3 rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors" onclick="generateTicket()">Complete Invitation</button>
+</div>
+</div>
+</div>
+</div>
+<!-- UI State 3: THE GOLDEN TICKET -->
+<section class="hidden w-full max-w-xl mx-auto transition-all duration-1000 scale-90 opacity-0 h-screen flex flex-col items-start justify-start pt-4" id="ticket-section">
+<div class="relative golden-gradient rounded-xl shadow-[0_20px_50px_rgba(184,134,11,0.3)] overflow-hidden ticket-border" id="ticket-card">
+<div class="absolute inset-0 guilloche-pattern pointer-events-none"></div>
+<div class="relative z-10 p-6 md:p-8 scallop-border border-x-[1px] border-gold-deep/20"><div class="w-full border-b-2 border-double border-gold-deep/40 pb-4 mb-6 flex flex-col items-center">
+<div class="flex items-center gap-4 w-full">
+<div class="flex-1 h-[1px] bg-gold-deep/30"></div>
+<span class="material-symbols-outlined text-gold-deep opacity-60">workspace_premium</span>
+<div class="flex-1 h-[1px] bg-gold-deep/30"></div>
+</div>
+<h3 class="font-headline-md text-gold-deep tracking-[0.2em] uppercase mt-2 text-center text-sm">Official Golden Ticket</h3>
+<div class="flex items-center gap-4 w-full mt-4">
+<div class="flex-1 h-[1px] bg-gold-deep/30"></div>
+<span class="material-symbols-outlined text-gold-deep opacity-60">auto_awesome</span>
+<div class="flex-1 h-[1px] bg-gold-deep/30"></div>
+</div>
+</div>
+<div class="flex flex-col items-center space-y-5">
+<div class="text-center space-y-2">
+<h4 class="font-headline-lg text-headline-lg text-gold-deep italic leading-tight">The Amour Carnival</h4>
+<p class="font-label-md text-gold-deep/80 uppercase tracking-widest mt-1 text-xs">Exclusive Invitation for: Beautiful</p>
+</div>
+<div class="w-full grid grid-cols-2 gap-4 border-y-2 border-double border-gold-deep/40 py-5">
+<div class="space-y-2">
+<span class="font-label-sm text-gold-deep/70 uppercase block font-bold">Commencing</span>
+<span class="font-headline-md text-headline-md text-black font-extrabold" id="final-date">TBD</span>
+</div>
+<div class="space-y-2 text-right">
+<span class="font-label-sm text-gold-deep/70 uppercase block font-bold">Rendezvous</span>
+<span class="font-headline-md text-headline-md text-black font-extrabold" id="final-location">Secret</span>
+</div>
+<div class="space-y-2">
+<span class="font-label-sm text-gold-deep/70 uppercase block font-bold">Atmosphere</span>
+<span class="font-headline-md text-headline-md text-black font-extrabold" id="final-vibe">Magical</span>
+</div>
+<div class="space-y-2 text-right">
+<span class="font-label-sm text-gold-deep/70 uppercase block font-bold">Voucher No.</span>
+<span class="font-headline-md text-headline-md text-black font-extrabold">#0214-GOLD</span>
+</div>
+</div>
+<div class="text-center space-y-2 italic text-gold-deep font-body-md max-w-sm leading-relaxed px-4 text-sm">
+                        "This premium voucher entitles the bearer to unlimited smiles, one high-quality hug, and a date that will go down in history."
+                    </div>
+<div class="pt-4 flex justify-center">
+<button class="bg-black text-gold-light px-8 py-3 rounded-full hover:scale-105 transition-transform flex items-center gap-2 font-label-md shadow-lg" onclick="redeemTicket(event)">
+<span class="material-symbols-outlined text-[20px]">stars</span>
+                            Redeem Your Magic
+                        </button>
+</div>
+</div>
+</div>
+<div class="h-4 w-full bg-gold-deep/20 flex justify-center items-center overflow-hidden">
+<div class="flex gap-4 opacity-30">
+<span class="material-symbols-outlined text-xs">favorite</span>
+<span class="material-symbols-outlined text-xs">favorite</span>
+<span class="material-symbols-outlined text-xs">favorite</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+    // Theme definitions (maps theme IDs to CSS classes already defined in style tag)
+    const THEMES = [
+        { id: "blush", name: "Soft Blush", bg: "#fcf8f8", primary: "#e11d48" },
+        { id: "rose", name: "Romantic Rose", bg: "#fff1f2", primary: "#be123c" },
+        { id: "crimson", name: "Crimson Passion", bg: "#fef2f2", primary: "#991b1b" },
+        { id: "midnight", name: "Midnight Wine", bg: "#1e1b4b", primary: "#818cf8" }
+    ];
+
+    // Default config (fallback if config.json fails to load)
+    const DEFAULT_CONFIG = {
+        theme: "blush",
+        invitation: {
+            title: "Will you be my Valentine, Beautiful?",
+            subtitle: "A special curated experience awaits... if you say yes.",
+            yesButtonText: "YES!",
+            noButtonText: "No",
+            finalNoMessage: "Too late! You broke the magic 💔"
+        },
+        images: {
+            click1: "",
+            click2: "",
+            click3: "",
+            click4: "",
+            final: "",
+            knockoutTimeMs: 8000
+        },
+        formOptions: {
+            places: ["Fancy Dinner", "Starlit Picnic", "Cozy Movie Night", "Art Gallery", "Beach Walk"],
+            vibes: ["Romantic", "Playful", "Chill", "Elegant", "Adventurous"]
+        }
+    };
+
+    let DATA_CONFIG = null;
+    let noClickCount = 0;
+    let selectedLocation = "";
+    let selectedVibe = "";
+    let interactionDisabled = false;
+    let knockoutTimer = null;
+
+    // Load config from config.json, fall back to defaults
+    function loadConfig() {
+        return fetch('config.json')
+            .then(r => {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            })
+            .catch(err => {
+                console.warn('Could not load config.json:', err.message, '— using defaults');
+                return null;
+            });
+    }
+
+    loadConfig().then(data => {
+        if (data) {
+            DATA_CONFIG = data;
+        } else {
+            DATA_CONFIG = DEFAULT_CONFIG;
+        }
+        init();
+    });
+
+    // Initialization
+    function init() {
+        // Set basic text
+        document.getElementById('ask-headline').innerText = DATA_CONFIG.invitation.title;
+        document.getElementById('ask-subtitle').innerText = DATA_CONFIG.invitation.subtitle;
+        document.getElementById('yes-btn').innerText = DATA_CONFIG.invitation.yesButtonText;
+        document.getElementById('no-btn').innerText = DATA_CONFIG.invitation.noButtonText;
+        document.getElementById('broken-message').innerText = DATA_CONFIG.invitation.finalNoMessage;
+        document.getElementById('final-image').src = DATA_CONFIG.images.final;
+
+        // Apply theme from config
+        setTheme(DATA_CONFIG.theme || 'blush');
+
+        populateGrids();
+    }
+
+    function setTheme(themeId) {
+        document.body.className = "grainy-bg min-h-screen font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed transition-colors duration-1000 overflow-hidden";
+        document.body.classList.add(`theme-${themeId}`);
+    }
+
+    function handleNo() {
+        if (interactionDisabled) return;
+        
+        noClickCount++;
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const envelope = document.getElementById('main-envelope');
+        const heartImg = document.getElementById('sad-heart-display');
+        
+        if (knockoutTimer) clearTimeout(knockoutTimer);
+
+        if (noClickCount < 5) {
+            const imgKey = `click${noClickCount}`;
+            heartImg.src = DATA_CONFIG.images[imgKey];
+            heartImg.classList.remove('opacity-0', 'knocked-out');
+            heartImg.classList.add('opacity-100');
+
+            knockoutTimer = setTimeout(() => {
+                heartImg.classList.add('knocked-out');
+            }, DATA_CONFIG.images.knockoutTimeMs);
+
+            noBtn.innerText = DATA_CONFIG.invitation.noButtonText;
+            envelope.classList.add('envelope-shake');
+            setTimeout(() => envelope.classList.remove('envelope-shake'), 500);
+
+            const scaleNo = Math.max(0.6, 1 - (noClickCount * 0.1));
+            const scaleYes = 1 + (noClickCount * 0.4);
+            noBtn.style.transform = `scale(${scaleNo})`;
+            yesBtn.style.transform = `scale(${scaleYes})`;
+        } 
+        else if (noClickCount === 5) {
+            heartImg.classList.remove('opacity-100');
+            heartImg.classList.add('opacity-0', 'knocked-out');
+            triggerTearEffect();
+        }
+    }
+
+    function triggerTearEffect() {
+        interactionDisabled = true;
+        const envelope = document.getElementById('main-envelope');
+        const normalView = document.getElementById('envelope-normal-view');
+        const tearParts = document.getElementById('tear-parts');
+        const leftPart = document.getElementById('tear-part-left');
+        const rightPart = document.getElementById('tear-part-right');
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const subtitle = document.getElementById('ask-subtitle');
+        const brokenMsg = document.getElementById('broken-message');
+        const finalBear = document.getElementById('final-mad-bear-container');
+
+        normalView.classList.add('hidden');
+        tearParts.classList.remove('hidden');
+        
+        leftPart.classList.add('tear-left');
+        rightPart.classList.add('tear-right');
+
+        noBtn.classList.add('opacity-0', 'pointer-events-none');
+        yesBtn.classList.add('opacity-0', 'pointer-events-none');
+        subtitle.classList.add('opacity-0');
+        
+        setTimeout(() => {
+            envelope.classList.add('opacity-0');
+            document.getElementById('sad-heart-display').classList.add('opacity-0');
+            finalBear.classList.remove('opacity-0');
+            finalBear.classList.add('opacity-100');
+            brokenMsg.classList.remove('hidden');
+        }, 800);
+
+        setTimeout(resetToStart, 5000);
+    }
+
+    function resetToStart() {
+        noClickCount = 0;
+        interactionDisabled = false;
+        selectedLocation = "";
+        selectedVibe = "";
+        if (knockoutTimer) clearTimeout(knockoutTimer);
+
+        const sections = ['ask-section', 'ticket-section'];
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (id === 'ask-section') {
+                el.classList.remove('hidden', 'opacity-0', 'scale-90');
+            } else {
+                el.classList.add('hidden', 'opacity-0', 'scale-90');
+            }
+        });
+
+        const modal = document.getElementById('letter-modal');
+        modal.classList.remove('modal-active');
+        
+        const envelope = document.getElementById('main-envelope');
+        const normalView = document.getElementById('envelope-normal-view');
+        const tearParts = document.getElementById('tear-parts');
+        const leftPart = document.getElementById('tear-part-left');
+        const rightPart = document.getElementById('tear-part-right');
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const subtitle = document.getElementById('ask-subtitle');
+        const brokenMsg = document.getElementById('broken-message');
+        const heartImg = document.getElementById('sad-heart-display');
+        const finalBear = document.getElementById('final-mad-bear-container');
+
+        brokenMsg.classList.add('hidden');
+        finalBear.classList.add('opacity-0');
+        finalBear.classList.remove('opacity-100');
+        envelope.classList.remove('opacity-0', 'open');
+        normalView.classList.remove('hidden');
+        tearParts.classList.add('hidden');
+        leftPart.classList.remove('tear-left');
+        rightPart.classList.remove('tear-right');
+        subtitle.classList.remove('opacity-0');
+        heartImg.classList.remove('opacity-100', 'knocked-out');
+        heartImg.classList.add('opacity-0');
+        
+        noBtn.classList.remove('opacity-0', 'pointer-events-none');
+        noBtn.style.transform = 'scale(1)';
+        noBtn.innerText = DATA_CONFIG.invitation.noButtonText;
+        
+        yesBtn.classList.remove('opacity-0', 'pointer-events-none');
+        yesBtn.style.transform = 'scale(1)';
+        
+        document.getElementById('date-input').value = "";
+        document.getElementById('custom-location-wrapper').classList.add('hidden');
+        document.getElementById('custom-vibe-wrapper').classList.add('hidden');
+        
+        goToFold(1);
+    }
+
+    function handleYes() {
+        if (interactionDisabled) return;
+        const envelope = document.getElementById('main-envelope');
+        const modal = document.getElementById('letter-modal');
+        const content = document.getElementById('letter-content');
+        
+        envelope.classList.add('open');
+        
+        setTimeout(() => {
+            modal.classList.add('modal-active');
+            content.classList.remove('translate-y-10');
+            populateGrids();
+        }, 600);
+    }
+
+    function goToFold(foldNum) {
+        const folds = [1, 2, 3];
+        folds.forEach(f => {
+            const el = document.getElementById(`fold-${f}`);
+            if (f === foldNum) {
+                el.classList.remove('hidden');
+                setTimeout(() => el.classList.remove('opacity-0'), 10);
+            } else {
+                el.classList.add('hidden', 'opacity-0');
+            }
+        });
+    }
+
+    function populateGrids() {
+        const locGrid = document.getElementById('location-grid');
+        const vibeGrid = document.getElementById('vibe-grid');
+        
+        locGrid.innerHTML = '';
+        DATA_CONFIG.formOptions.places.forEach(loc => locGrid.appendChild(createChoiceBtn(loc, 'location')));
+        locGrid.appendChild(createChoiceBtn('Surprise Me ✨', 'location'));
+
+        vibeGrid.innerHTML = '';
+        DATA_CONFIG.formOptions.vibes.forEach(vibe => vibeGrid.appendChild(createChoiceBtn(vibe, 'vibe')));
+        vibeGrid.appendChild(createChoiceBtn('Surprise Me ✨', 'vibe'));
+    }
+
+    function createChoiceBtn(text, type) {
+        const btn = document.createElement('button');
+        btn.innerText = text;
+        btn.className = "choice-btn p-3 rounded-lg border-2 border-surface-container-high hover:border-primary hover:bg-primary-fixed-dim transition-all text-label-md text-on-surface-variant font-medium";
+        if ((type === 'location' && selectedLocation === text) || (type === 'vibe' && selectedVibe === text)) {
+            btn.classList.add('bg-primary', 'text-white', 'border-primary');
+        }
+        btn.dataset.type = type;
+        btn.dataset.value = text;
+        btn.onclick = () => selectChoice(text, type, btn);
+        return btn;
+    }
+
+    function toggleCustom(type) {
+        const wrapper = document.getElementById(`custom-${type}-wrapper`);
+        const isHidden = wrapper.classList.contains('hidden');
+        
+        if (isHidden) {
+            wrapper.classList.remove('hidden');
+            wrapper.querySelector('input').focus();
+        } else {
+            wrapper.classList.add('hidden');
+        }
+    }
+
+    function addCustomOption(type) {
+        const input = document.getElementById(`custom-${type}-input`);
+        const val = input.value.trim();
+        if (!val) return;
+
+        if (type === 'location') {
+            if (!DATA_CONFIG.formOptions.places.includes(val)) {
+                DATA_CONFIG.formOptions.places.push(val);
+                selectedLocation = val;
+            }
+        } else {
+            if (!DATA_CONFIG.formOptions.vibes.includes(val)) {
+                DATA_CONFIG.formOptions.vibes.push(val);
+                selectedVibe = val;
+            }
+        }
+        
+        input.value = '';
+        populateGrids();
+        document.getElementById(`custom-${type}-wrapper`).classList.add('hidden');
+    }
+
+    function selectChoice(val, type, btn) {
+        if (type === 'location') selectedLocation = val;
+        else selectedVibe = val;
+        
+        const grid = btn.parentElement;
+        grid.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('bg-primary', 'text-white', 'border-primary'));
+        btn.classList.add('bg-primary', 'text-white', 'border-primary');
+
+        // Hide custom input when a grid option is selected
+        document.getElementById(`custom-${type}-wrapper`).classList.add('hidden');
+    }
+
+    function pickForMe(type) {
+        const grid = document.getElementById(`${type}-grid`);
+        const choiceBtns = Array.from(grid.querySelectorAll('.choice-btn'));
+        
+        if (choiceBtns.length === 0) return;
+
+        // Hide custom input
+        document.getElementById(`custom-${type}-wrapper`).classList.add('hidden');
+
+        let index = 0;
+        const interval = setInterval(() => {
+            choiceBtns.forEach(b => b.classList.remove('bg-primary-container', 'text-white', 'border-primary-container'));
+            choiceBtns[index].classList.add('bg-primary-container', 'text-white', 'border-primary-container');
+            index = (index + 1) % choiceBtns.length;
+        }, 80);
+
+        setTimeout(() => {
+            clearInterval(interval);
+            choiceBtns.forEach(b => b.classList.remove('bg-primary-container', 'text-white', 'border-primary-container'));
+            const finalIndex = Math.floor(Math.random() * choiceBtns.length);
+            selectChoice(choiceBtns[finalIndex].dataset.value, type, choiceBtns[finalIndex]);
+        }, 800);
+    }
+
+    function generateTicket() {
+        const dateVal = document.getElementById('date-input').value;
+        const finalLoc = selectedLocation || "A Mystery Spot";
+        const finalVibe = selectedVibe || "Enchanting";
+        const finalDate = dateVal ? new Date(dateVal).toLocaleString('en-US', {month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'}) : "Feb 14, 7:00 PM";
+
+        document.getElementById('final-date').innerText = finalDate;
+        document.getElementById('final-location').innerText = finalLoc;
+        document.getElementById('final-vibe').innerText = finalVibe;
+
+        const modal = document.getElementById('letter-modal');
+        const askSec = document.getElementById('ask-section');
+        const ticketSec = document.getElementById('ticket-section');
+
+        modal.classList.remove('modal-active');
+        askSec.classList.add('opacity-0', 'scale-90');
+        
+        setTimeout(() => {
+            askSec.classList.add('hidden');
+            ticketSec.classList.remove('hidden');
+            setTimeout(() => {
+                ticketSec.classList.remove('opacity-0', 'scale-90');
+                ticketSec.classList.add('opacity-100', 'scale-100');
+            }, 100);
+        }, 500);
+
+        // Auto-send email to configured recipient
+        setTimeout(() => sendTicketEmail(), 1000);
+    }
+
+    function redeemTicket(event) {
+        const btn = event.currentTarget;
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px] mr-2 animate-bounce">downloading</span> Saving...';
+        btn.disabled = true;
+
+        const ticketEl = document.getElementById('ticket-card');
+
+        // Use html2canvas to capture ticket as image
+        if (typeof html2canvas !== 'undefined') {
+            // Hide the button before capturing
+            btn.style.display = 'none';
+
+            html2canvas(ticketEl, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: null
+            }).then(canvas => {
+                // Show button again
+                btn.style.display = '';
+
+                // Create download link
+                const link = document.createElement('a');
+                link.download = 'golden-ticket.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+
+                btn.innerHTML = '<span class="material-symbols-outlined text-[20px] mr-2">check_circle</span> Saved!';
+                // Reset to main page after 10 seconds
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.disabled = false;
+                    resetToStart();
+                }, 10000);
+            }).catch(() => {
+                // Show button again and fallback to print
+                btn.style.display = '';
+                window.print();
+                btn.innerHTML = originalHtml;
+                btn.disabled = false;
+            });
+        } else {
+            // Fallback to print
+            window.print();
+            btn.innerHTML = '<span class="material-symbols-outlined text-[20px] mr-2">check_circle</span> Done!';
+            setTimeout(() => {
+                btn.innerHTML = originalHtml;
+                btn.disabled = false;
+                resetToStart();
+            }, 10000);
+        }
+    }
+
+    // Download ticket as image using html2canvas-like approach (print fallback)
+    function downloadTicket() {
+        window.print();
+    }
+
+    // Show email input
+    function emailTicket() {}
+
+    // Send ticket details via EmailJS (called from generateTicket)
+    function sendTicketEmail() {
+        if (!DATA_CONFIG?.email?.publicKey || !DATA_CONFIG?.email?.serviceId || !DATA_CONFIG?.email?.templateId || !DATA_CONFIG?.email?.toEmail) {
+            console.warn('Email not configured in config.json');
+            return;
+        }
+
+        try {
+            emailjs.init(DATA_CONFIG.email.publicKey);
+            emailjs.send(DATA_CONFIG.email.serviceId, DATA_CONFIG.email.templateId, {
+                to_email: DATA_CONFIG.email.toEmail,
+                date: document.getElementById('final-date').innerText,
+                location: document.getElementById('final-location').innerText,
+                vibe: document.getElementById('final-vibe').innerText,
+                title: DATA_CONFIG.invitation.title,
+                message: 'A golden ticket date invitation has been accepted! 🎉'
+            }).then(() => {
+                console.log('Email sent to:', DATA_CONFIG.email.toEmail);
+            }).catch(err => {
+                console.warn('EmailJS send failed:', err);
+            });
+        } catch (e) {
+            console.warn('EmailJS error:', e);
+        }
+    }
+</script>
+</body></html>
